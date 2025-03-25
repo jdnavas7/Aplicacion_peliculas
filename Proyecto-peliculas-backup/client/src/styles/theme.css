@@ -1,0 +1,83 @@
+:root[data-theme="light"] {
+    --background-primary: #ffffff;
+    --background-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --card-background: #ffffff;
+    --card-border: #dee2e6;
+    --navbar-bg: #f8f9fa;
+    --navbar-color: #212529;
+}
+
+:root[data-theme="dark"] {
+    --background-primary: #121212;
+    --background-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d1d1;
+    --card-background: #1a1a1a;
+    --card-border: #2d3748;
+    --navbar-bg: #212529;
+    --navbar-color: #ffffff;
+}
+
+/* Estilos del botón de tema */
+.theme-toggle-btn {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para el tema */
+.dark {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+.light {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+/* Estilos para la paginación */
+.pagination-dark .page-link {
+    background-color: var(--background-secondary);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.pagination-dark .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+.pagination-dark .page-item.disabled .page-link {
+    background-color: var(--background-secondary);
+    border-color: var(--card-border);
+    color: var(--text-secondary);
+}
+
+/* Ajustes adicionales para el modo claro */
+.light .navbar {
+    border-bottom: 1px solid var(--card-border);
+}
+
+/* Transiciones suaves */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

@@ -1,0 +1,54 @@
+/* src/components/MovieCard.css */
+.movie-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para modo claro */
+.movie-card.bg-light {
+    border: 1px solid #dee2e6;
+}
+
+.movie-card.bg-light .card-title {
+    color: #212529;
+}
+
+.movie-card.bg-light .card-text {
+    color: #495057;
+}
+
+/* Estilos específicos para modo oscuro */
+.movie-card.bg-dark {
+    background-color: #1a1a1a !important;
+}
+
+.movie-card.bg-dark .card-title {
+    color: #ffffff;
+}
+
+.movie-card.bg-dark .card-text {
+    color: #d1d1d1;
+}
+
+/* Estilos para la imagen */
+.movie-card .card-img-top {
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .card-img-top {
+    opacity: 0.9;
+}
+
+/* Estilos para los badges y elementos interactivos */
+.movie-card .badge {
+    transition: background-color 0.3s ease;
+}
+
+.movie-card .btn-warning:hover {
+    transform: translateY(-2px);
+}

@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #121212;
+    color: white;
+}
+
+.App {
+    min-height: 100vh;
+}
+
+/* Estilos para las tarjetas de películas */
+.movie-card {
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para la paginación */
+.pagination .page-link {
+    background-color: #343a40;
+    border-color: #454d55;
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: black;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #343a40;
+    border-color: #454d55;
+    color: #6c757d;
+}
+
+/* Estilos para la página de detalles de película */
+.movie-details {
+    position: relative;
+    background-color: #1a1a1a;
+}
+
+.backdrop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(18, 18, 18, 0.5) 0%,
+            rgba(18, 18, 18, 1) 100%
+    );
+}
+
+.movie-meta .badge {
+    font-size: 0.9rem;
+}
+
+.streaming-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Estilos para la página de películas guardadas */
+.saved-movie-container {
+    position: relative;
+    height: 100%;
+}
+
+.saved-date {
+    text-align: center;
+    padding: 0.5rem;
+    font-style: italic;
+}
+
+/* Animación suave al cargar las películas */
+.saved-movies .col {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar la animación con retraso para cada película */
+.saved-movies .col:nth-child(1) { animation-delay: 0.1s; }
+.saved-movies .col:nth-child(2) { animation-delay: 0.2s; }
+.saved-movies .col:nth-child(3) { animation-delay: 0.3s; }
+.saved-movies .col:nth-child(4) { animation-delay: 0.4s; }
